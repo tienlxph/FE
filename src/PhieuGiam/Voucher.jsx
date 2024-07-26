@@ -11,7 +11,7 @@ import { MdFormatColorText } from 'react-icons/md';
 import { useNavigate } from 'react-router-dom';
 const { Search } = Input;
 
-export default function PhieuGiamGia() {
+export default function Voucher() {
     const searchInput = useRef(null);
     const [phieuGiamGia, setphieuGiamGia] = useState([]);
     const [searchResults, setSearchResults] = useState([]);

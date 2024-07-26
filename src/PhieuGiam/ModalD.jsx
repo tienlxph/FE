@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button, Modal, Space, notification } from 'antd';
 import { AiOutlineDelete } from "react-icons/ai";
@@ -41,9 +40,10 @@ const ModalD = ({ recordId, onActionSuccess }) => {
 
     const handleClickDelete = async (id) => {
         try {
-            await axios.patch(`http://localhost:8080/kh/delete/${id}`);
+            await axios.patch(`http://localhost:8080/pgg/delete/${id}`);
             console.log(id);
             onActionSuccess();
+             
             openNotification("success", "Hệ thống", "Đổi trạng thái thành công ~", "bottomRight");
         } catch (error) {
             console.error('Error deleting product:', error);
@@ -55,11 +55,11 @@ const ModalD = ({ recordId, onActionSuccess }) => {
         <>
             {contextHolder}
             <Space>
-                <Button danger shape="circle" icon={<RxSwitch />} onClick={showModal} />
+                <Button danger shape="circle" icon={<AiOutlineDelete />} onClick={showModal} />
             </Space>
             <Modal
                 open={open}
-                title="Đổi trạng thái khách hàng ~"
+                title="Đổi trạng thái Phiếu Giảm giá ~"
                 onOk={handleOk}
                 onCancel={handleCancel}
                 footer={[
@@ -71,7 +71,7 @@ const ModalD = ({ recordId, onActionSuccess }) => {
                     </Button>,
                 ]}
             >
-                <p>Bạn có chắc chắn muốn đổi trạng thái Khách hàng  này?</p>
+                <p>Bạn có chắc chắn muốn đổi trạng Phiếu Giảm giá này?</p>
             </Modal>
         </>
     );

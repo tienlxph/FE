@@ -52,7 +52,7 @@ function MenuAdmin() {
       getItem(<Link to="/mausac">Màu sắc</Link>, '7', <AiOutlineBgColors />),
       getItem(<Link to="/kichthuoc">Kích thước</Link>, '8', <SiZerodha />),
     ]),
-    getItem(<Link to="/nguoidung">Quản lý người dùng</Link>, '63', <FaUserFriends />),
+    getItem(<Link to="/khachhang">Quản lý người dùng</Link>, '63', <FaUserFriends />),
     getItem(<Link to="/hoadon">Quản lý hóa đơn</Link>, '9', <RiBillLine />),
     getItem(<Link to="/bantaiquay">Bán hàng tại quầy</Link>, '62', <BsShopWindow />),
     getItem('Giảm giá', 'sub5', <FaTag />,

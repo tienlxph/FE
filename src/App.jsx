@@ -1,15 +1,23 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { Breadcrumb } from 'antd';
-import PhieuGiamGia from './PhieuGiamGia';
+import Voucher from './PhieuGiam/Voucher';
+import KhachHang from './KhachHang/KhachHang';
 import MenuAdmin from './Menu';
-import ModalA from './ModalA';
+import ModalKH from './KhachHang/ModalKH';
+import ModalA from './PhieuGiam/ModalA';
+
+
+
+
 const breadcrumbNameMap = {
+  '/KhachHang': 'Khách Hàng',
+  '/KhachHang/add': 'Thêm Khách Hàng',
   '/PhieuGiamGia': 'Phiếu giảm giá',
   '/phieuGiamGia/add': 'Phiếu giảm giá',
   '/productsize': 'Kích thước sản phẩm',
   '/promotions': 'Khuyến mãi',
-  '/PhieuGiamGia': 'Phiếu giảm giá',
+
   '/stafs': 'Nhân viên',
   '/orders': 'Đơn hàng',
 };
@@ -70,7 +78,11 @@ const App = () => {
             <Route path="/productsize" element={<UpSize />} />
             <Route path="/promotions" element={<Promotion />} /> */}
              <Route path="/phieuGiamGia/add" element={<ModalA />} />
-            <Route path="/PhieuGiamGia" element={<PhieuGiamGia />} />
+            <Route path="/PhieuGiamGia" element={<Voucher />} />
+            <Route path="/khachhang" element={<KhachHang />} />
+            <Route path="/KhachHang/add" element={<ModalKH />} />
+            {/* <Route path="/NhanVien" element={<Nhanvien />} />
+            <Route path="/NhanVien/add" element={<ModalA />} /> */}
             {/* <Route path="/stafs" element={<Staf />} />
             <Route path="/orders" element={<Order />} /> */}
           </Routes>
